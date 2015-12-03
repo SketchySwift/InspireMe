@@ -1,25 +1,81 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="InspireMe" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image1.png" translatesAutoresizingMaskIntoConstraints="NO" id="hRB-1W-JZa">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <animations/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VJo-pe-cda">
+                                <rect key="frame" x="0.0" y="606" width="375" height="60"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.46711341628442393" green="0.33992881356419857" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="FUF-bF-JKD"/>
+                                    <constraint firstAttribute="width" constant="375" id="XD6-Tp-TWk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="32"/>
+                                <state key="normal" title="Inspire Me">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="inspireButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lCl-OG-ldR"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stay Hungry. Stay Foolish" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="25" translatesAutoresizingMaskIntoConstraints="NO" id="nNM-TL-aeY">
+                                <rect key="frame" x="15" y="259" width="344" height="150"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="31"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hRB-1W-JZa" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="1CT-47-vRg"/>
+                            <constraint firstItem="nNM-TL-aeY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1MP-TT-iMy"/>
+                            <constraint firstItem="VJo-pe-cda" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="1cl-pr-JmT"/>
+                            <constraint firstItem="hRB-1W-JZa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="3VK-Ng-1LJ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="VJo-pe-cda" secondAttribute="bottom" constant="1" id="FmJ-1c-5WF"/>
+                            <constraint firstAttribute="trailing" secondItem="VJo-pe-cda" secondAttribute="trailing" id="Y2N-3v-DVz"/>
+                            <constraint firstItem="nNM-TL-aeY" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="bXc-LM-YEP"/>
+                            <constraint firstItem="nNM-TL-aeY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="239" id="dYr-lq-K1d"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="hRB-1W-JZa" secondAttribute="bottom" id="dej-tx-FsZ"/>
+                            <constraint firstItem="VJo-pe-cda" firstAttribute="top" secondItem="nNM-TL-aeY" secondAttribute="bottom" constant="197" id="gek-iR-zDX"/>
+                            <constraint firstItem="nNM-TL-aeY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="15" id="him-ug-5Jy"/>
+                            <constraint firstAttribute="trailing" secondItem="hRB-1W-JZa" secondAttribute="trailing" id="hrW-ID-MLJ"/>
+                            <constraint firstAttribute="trailing" secondItem="nNM-TL-aeY" secondAttribute="trailing" constant="16" id="iVF-mf-rYY"/>
+                        </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="backgroundImage" destination="hRB-1W-JZa" id="Cqe-55-Owb"/>
+                        <outlet property="inspireButton" destination="VJo-pe-cda" id="qnT-il-Mat"/>
+                        <outlet property="quoteLabel" destination="nNM-TL-aeY" id="wCs-cw-qFn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="439.5" y="389.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="image1.png" width="879" height="1054"/>
+    </resources>
 </document>
